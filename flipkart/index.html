@@ -74,6 +74,48 @@
                 display: grid;
                 align-items: center;
             }
+
+            #login-alert-onload {
+                animation: login-shake 4.72s ease infinite;
+            }
+
+            @keyframes login-shake {
+                0% {
+                    transform: translate(0)
+                }
+
+                1.8% {
+                    transform: translate(5px)
+                }
+
+                3.6% {
+                    transform: translate(0)
+                }
+
+                5.3% {
+                    transform: translate(5px)
+                }
+
+                7.1% {
+                    transform: translate(0)
+                }
+
+                8.9% {
+                    transform: translate(5px)
+                }
+
+                10.7% {
+                    transform: translate(0)
+                }
+
+                to {
+                    transform: translate(0)
+                }
+
+                .login-text {
+                    margin-left: 4px
+                }
+            }
         </style>
 
     </head>
@@ -194,6 +236,16 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+
+                    <!-- login alert  -->
+                    <div id="login-alert-onload" class="absolute w-[150px] h-[50px] grid grid-rows-[auto_1fr]">
+                        <div class="w-[9px] h-1 justify-self-center bg-[#2a55e5]"
+                             style="clip-path: polygon(50% 0%, 100% 100%, 0% 100%);">
+                        </div>
+                        <div
+                             class="login-text w-full rounded-[2px] grid place-content-center bg-[#2a55e5] text-white text-bold text-[18px]">
+                            Login</div>
                     </div>
                 </div>
 
