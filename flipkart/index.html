@@ -75,7 +75,7 @@
                 align-items: center;
             }
 
-            #login-alert-onload {
+            #login-alert {
                 animation: login-shake 4.72s ease infinite;
             }
 
@@ -239,7 +239,7 @@
                     </div>
 
                     <!-- login alert  -->
-                    <div id="login-alert-onload" class="absolute w-[150px] h-[50px] grid grid-rows-[auto_1fr]">
+                    <div id="login-alert" class="hidden absolute w-[150px] h-[50px] grid grid-rows-[auto_1fr]">
                         <div class="w-[9px] h-1 justify-self-center bg-[#2a55e5]"
                              style="clip-path: polygon(50% 0%, 100% 100%, 0% 100%);">
                         </div>
@@ -247,6 +247,23 @@
                              class="login-text w-full rounded-[2px] grid place-content-center bg-[#2a55e5] text-white text-bold text-[18px]">
                             Login</div>
                     </div>
+                    <!-- login alert Show/Hide functionality  -->
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const loginAlert = document.querySelector('#login-alert');
+                            
+                            // display the login alert after a 4-second delay
+                            setTimeout(() => {
+                                loginAlert.classList.toggle('hidden');
+
+                                // hide the login alert after 10 seconds
+                                setTimeout(() => {
+                                    loginAlert.classList.toggle('hidden');
+                                    console.log('display login alert...');
+                                }, 15000);
+                            }, 3000);
+                        });
+                    </script>
                 </div>
 
                 <!-- cart tab  -->
