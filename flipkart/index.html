@@ -39,13 +39,16 @@
                 font-family: inter_regular, Arial, sans-serif;
             }
 
-            #login-wrapper *{
+            #login-wrapper * {
                 transition: transform .3s ease-in-out;
             }
-            #login-wrapper:hover #dropdown-icon img{
+
+            #login-wrapper:hover #dropdown-icon img {
                 transform: rotate(180deg);
             }
-            #login-wrapper:hover #dropdown-icon img, #login-wrapper:hover #login-icon {
+
+            #login-wrapper:hover #dropdown-icon img,
+            #login-wrapper:hover #login-icon {
                 filter: invert(100%) sepia(69%) saturate(0) hue-rotate(132deg) brightness(114%) contrast(101%);
             }
         </style>
@@ -67,7 +70,7 @@
                     </span>
                 </div>
                 <!-- logo container  -->
-                <div id="logo-wrapper" class="-ms-14 md:m-0">
+                <div id="logo-wrapper" title="Flipkart" class="-ms-14 md:m-0">
                     <!-- logo  -->
                     <picture id="logo">
                         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
@@ -76,7 +79,7 @@
                 </div>
 
                 <!-- search bar container  -->
-                <div id="search-wrapper" class="w-full lg:max-w-[680px] hidden md:inline">
+                <div id="search-wrapper" title="Search for Products, Brands and More" class="w-full lg:max-w-[680px] hidden md:inline">
                     <div id="search" class="bg-[#f0f5ff] grid rounded-lg grid-cols-[auto_1fr]">
                         <!-- search bar icon  -->
                         <span id="search-icon-wrapper" class="py-2 px-3 flex justify-center items-center w-auto rounded-l-lg">
@@ -105,6 +108,7 @@
 
             <!-- login dropdown tab  -->
             <div id="login-wrapper"
+                 title="Login"
                  class="rounded-lg p-2 flex justify-center items-center gap-2 border border-transparent lg:hover:border-[#2a55e5] lg:hover:bg-[#2a55e5] lg:hover:text-white">
                 <span id="login-icon" class="">
                         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg" alt="Login" class="-dOa_b L_FVxe st-current" width="24" height="24">
@@ -117,6 +121,7 @@
 
             <!-- cart tab  -->
             <div id="cart-wrapper"
+            title="Cart"
                  class="rounded-lg p-2 xl:flex justify-center items-center xl:gap-2">
                 <span id="login-icon" class="xl:flex xl:items-center">
                         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg" alt="Cart" class="_1XmrCc" width="24" height="24">
@@ -126,6 +131,7 @@
 
             <!-- seller tab  -->
             <div id="seller-wrapper"
+            title="Become a Seller"
                  class="hidden md:flex rounded-lg p-2 xl:grid xl:grid-cols-[auto_auto] justify-center items-center xl:gap-2">
                 <span id="seller-icon" class="my-auto">
                         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/Store-9eeae2.svg" alt="Become a Seller" class="_1XmrCc">
@@ -135,6 +141,7 @@
 
             <!-- more tab  -->
             <div id="more-wrapper"
+            title="Dropdown with more help links"
                  class="hidden md:inline rounded-lg flex justify-center items-center border border-transparent hover:bg-blue-500 hover:border hover:border-slate-200 hover:bg-slate-50">
                 <span id="more-icon" class="flex items-center justify-center p-2">
                         <img class="-dOa_b" src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg" width="24" height="24" alt="Dropdown with more help links">
