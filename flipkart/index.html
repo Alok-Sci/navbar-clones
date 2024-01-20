@@ -55,22 +55,27 @@
                 }
 
                 #login-wrapper:hover+#login-dropdown,
-                #login-dropdown:hover {
+                #more-wrapper:hover>#more-dropdown,
+                #login-dropdown:hover,
+                #more-dropdown:hover {
                     display: unset;
                 }
             }
 
-            #login-dropdown {
+            #login-dropdown,
+            #more-dropdown {
                 display: none;
             }
 
 
-            #login-dropdown-main li {
+            #login-dropdown-main li,
+            #more-dropdown-main li {
                 display: inline-grid;
                 grid-template-columns: auto minmax(auto, 100%);
             }
 
-            #login-dropdown-main li * {
+            #login-dropdown-main li *,
+            #more-dropdown-main li * {
                 display: grid;
                 align-items: center;
             }
@@ -220,12 +225,46 @@
                 <!-- more tab  -->
                 <div id="more-wrapper"
                      title="Dropdown with more help links"
-                     class="hidden md:inline rounded-lg flex justify-center items-center border border-transparent hover:bg-blue-500 hover:border hover:border-slate-200 hover:bg-slate-50">
+                     class="relative hidden md:inline rounded-lg flex justify-center items-center border border-transparent hover:bg-blue-500 hover:border hover:border-slate-200 hover:bg-slate-50">
                     <span id="more-icon" class="flex items-center justify-center p-2">
-                        <img class="-dOa_b" src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg" width="24" height="24" alt="Dropdown with more help links">
+                        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg" width="24" height="24" alt="Dropdown with more help links">
                     </span>
+                    <!-- </div> -->
+                    <div id="more-dropdown"
+                         class="absolute min-w-max right-0 text-black rounded-lg border bg-white">
+                        <ul>
+                            <div id="more-dropdown-main">
+                                <ul class="grid text-sm">
+                                    <li class="px-3 py-2 hover:bg-slate-100" title="Notification Preferences">
+                                        <span class="me-2">
+                                            <img class="m-[3px]" src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/notificationPreferences-cfffaf.svg" alt="Notification Preferences" width="18" height="18">
+                                        </span>
+                                        <span>Notification Preferences</span>
+                                    </li>
+                                    <li class="px-3 py-2 hover:bg-slate-100" title="24x7 Customer Care">
+                                        <span class="me-2 ">
+                                            <img class="m-[3px]" src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/helpcenter-7d90c0.svg" alt="24x7 Customer Care" width="18" height="18">
+                                        </span>
+                                        <span>24x7 Customer Care</span>
+                                    </li>
+                                    <li class="px-3 py-2 hover:bg-slate-100" title="Advertise">
+                                        <span class="me-2 ">
+                                            <img class="m-[3px]" src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/advertise-298691.svg" alt="Advertise" width="18" height="18">
+                                        </span>
+                                        <span>Advertise</span>
+                                    </li>
+                                    <li class="px-3 py-2 hover:bg-slate-100" title="Download App">
+                                        <span class="me-2 ">
+                                            <img class="m-[3px]" src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/downloadApp-2ea657.svg" alt="Download App" width="18" height="18">
+                                        </span>
+                                        <span>Download App</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- </div> -->
 
         </header>
 
